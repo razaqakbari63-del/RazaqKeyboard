@@ -12,56 +12,61 @@ public class RazaqKeyboardService extends InputMethodService {
 
     @Override
     public View onCreateInputView() {
+
         view = getLayoutInflater().inflate(R.layout.keyboard_view, null);
+
         setupButtons();
         setPersian();
+
         return view;
     }
 
     private void setupButtons() {
 
-        setButton(R.id.key_zad, "ض", "Q");
-        setButton(R.id.key_sad, "ص", "W");
-        setButton(R.id.key_sen, "ث", "E");
-        setButton(R.id.key_ghaf, "ق", "R");
-        setButton(R.id.key_fa, "ف", "T");
-        setButton(R.id.key_ghain, "غ", "Y");
-        setButton(R.id.key_ain, "ع", "U");
+        setButton(R.id.key_zad, "ض");
+        setButton(R.id.key_sad, "ص");
+        setButton(R.id.key_sen, "ث");
+        setButton(R.id.key_ghaf, "ق");
+        setButton(R.id.key_fa, "ف");
+        setButton(R.id.key_ghain, "غ");
+        setButton(R.id.key_ain, "ع");
 
-        setButton(R.id.key_he, "ھ", "I");
-        setButton(R.id.key_khe, "خ", "O");
-        setButton(R.id.key_hah, "ح", "P");
-        setButton(R.id.key_jim, "ج", "A");
-        setButton(R.id.key_che, "چ", "S");
-        setButton(R.id.key_shin, "ش", "D");
-        setButton(R.id.key_sin, "س", "F");
+        setButton(R.id.key_he, "ه");
+        setButton(R.id.key_khe, "خ");
+        setButton(R.id.key_hah, "ح");
+        setButton(R.id.key_jim, "ج");
+        setButton(R.id.key_che, "چ");
+        setButton(R.id.key_shin, "ش");
+        setButton(R.id.key_sin, "س");
 
-        setButton(R.id.key_ye, "ے", "G");
-        setButton(R.id.key_be, "ب", "H");
-        setButton(R.id.key_lam, "ل", "J");
-        setButton(R.id.key_alef, "ا", "K");
-        setButton(R.id.key_te, "ت", "L");
-        setButton(R.id.key_nun, "טּ", "Z");
-        setButton(R.id.key_mim, "م", "X");
+        setButton(R.id.key_ye, "ی");
+        setButton(R.id.key_be, "ب");
+        setButton(R.id.key_lam, "ݪ");
+        setButton(R.id.key_alef, "ا");
+        setButton(R.id.key_te, "ت");
+        setButton(R.id.key_nun, "ن");
+        setButton(R.id.key_mim, "م");
 
-        setButton(R.id.key_kaf, "ڪ", "C");
-        setButton(R.id.key_gaf, "گ", "V");
-        setButton(R.id.key_vav, "و", "B");
-        setButton(R.id.key_re, "ࢪ", "N");
-        setButton(R.id.key_dal, "כ", "M");
-        setButton(R.id.key_zal, "ذ", "ᑕ");
-        setButton(R.id.key_ze, "ز", "ᘔ");
+        setButton(R.id.key_kaf, "ک");
+        setButton(R.id.key_gaf, "گ");
+        setButton(R.id.key_vav, "و");
+        setButton(R.id.key_re, "ر");
+        setButton(R.id.key_dal, "د");
+        setButton(R.id.key_zal, "ذ");
+        setButton(R.id.key_ze, "ز");
 
-        setButton(R.id.key_zhe, "ژ", "ᖇ");
-        setButton(R.id.key_ta, "ط", "ᗩ");
-        setButton(R.id.key_za, "ظ", "乙");
-        setButton(R.id.key_pe, "پ", "Ɋ");
-        setButton(R.id.key_hamze, "ء", "!");
+        setButton(R.id.key_zhe, "ژ");
+        setButton(R.id.key_ta, "ط");
+        setButton(R.id.key_za, "ظ");
+        setButton(R.id.key_pe, "پ");
+        setButton(R.id.key_hamze, "ء");
 
         Button back = (Button) view.findViewById(R.id.key_back);
+
         back.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (getCurrentInputConnection() != null) {
                     getCurrentInputConnection().deleteSurroundingText(1, 0);
                 }
@@ -69,6 +74,7 @@ public class RazaqKeyboardService extends InputMethodService {
         });
 
         Button space = (Button) view.findViewById(R.id.key_space);
+
         space.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,6 +83,7 @@ public class RazaqKeyboardService extends InputMethodService {
         });
 
         Button enter = (Button) view.findViewById(R.id.key_enter);
+
         enter.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,9 +92,11 @@ public class RazaqKeyboardService extends InputMethodService {
         });
 
         Button globe = (Button) view.findViewById(R.id.key_globe);
+
         globe.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 english = !english;
 
                 if (english) {
@@ -97,30 +106,34 @@ public class RazaqKeyboardService extends InputMethodService {
                 }
             }
         });
+
+        Button keshide = (Button) view.findViewById(R.id.key_keshide);
+
+        keshide.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendText("ـ");
+            }
+        });
     }
 
-    private void setButton(
-            int id,
-            final String persianText,
-            final String englishText) {
+    private void setButton(int id, final String text) {
 
         Button button = (Button) view.findViewById(id);
 
         if (button != null) {
+
             button.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (english) {
-                        sendText(englishText);
-                    } else {
-                        sendText(persianText);
-                    }
+                    sendText(text);
                 }
             });
         }
     }
 
     private void setText(int id, String text) {
+
         Button button = (Button) view.findViewById(id);
 
         if (button != null) {
@@ -129,6 +142,7 @@ public class RazaqKeyboardService extends InputMethodService {
     }
 
     private void sendText(String text) {
+
         if (getCurrentInputConnection() != null) {
             getCurrentInputConnection().commitText(text, 1);
         }
@@ -154,17 +168,30 @@ public class RazaqKeyboardService extends InputMethodService {
 
         setText(R.id.key_ye, "ے");
         setText(R.id.key_be, "ب");
-        setText(R.id.key_lam, "ل");
+
+        // ل استایلی
+        setText(R.id.key_lam, "ݪ");
+
         setText(R.id.key_alef, "ا");
         setText(R.id.key_te, "ت");
+
+        // ن استایلی
         setText(R.id.key_nun, "טּ");
+
         setText(R.id.key_mim, "م");
 
+        // ک استایلی
         setText(R.id.key_kaf, "ڪ");
+
         setText(R.id.key_gaf, "گ");
         setText(R.id.key_vav, "و");
+
+        // ر استایلی
         setText(R.id.key_re, "ࢪ");
+
+        // د = כ
         setText(R.id.key_dal, "כ");
+
         setText(R.id.key_zal, "ذ");
         setText(R.id.key_ze, "ز");
 
@@ -215,4 +242,4 @@ public class RazaqKeyboardService extends InputMethodService {
         setText(R.id.key_pe, "Ɋ");
         setText(R.id.key_hamze, "!");
     }
-                }
+    }
