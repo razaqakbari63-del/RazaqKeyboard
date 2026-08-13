@@ -2,6 +2,7 @@ package com.razaq.keyboard;
 
 import android.inputmethodservice.InputMethodService;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.inputmethod.InputConnection;
 import android.widget.Button;
 
@@ -50,26 +51,37 @@ public class RazaqKeyboardService extends InputMethodService {
         setKey(view, R.id.key_hamze, "ء");
 
         Button space = (Button) view.findViewById(R.id.key_space);
-        space.setOnClickListener(v -> sendText(" "));
+        space.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendText(" ");
+            }
+        });
 
         Button back = (Button) view.findViewById(R.id.key_back);
-        back.setOnClickListener(v -> {
-            InputConnection ic = getCurrentInputConnection();
-            if (ic != null) {
-                ic.deleteSurroundingText(1, 0);
+        back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputConnection ic = getCurrentInputConnection();
+                if (ic != null) {
+                    ic.deleteSurroundingText(1, 0);
+                }
             }
         });
 
         Button enter = (Button) view.findViewById(R.id.key_enter);
-        enter.setOnClickListener(v -> {
-            InputConnection ic = getCurrentInputConnection();
-            if (ic != null) {
-                ic.sendKeyEvent(new android.view.KeyEvent(
-                        android.view.KeyEvent.ACTION_DOWN,
-                        android.view.KeyEvent.KEYCODE_ENTER));
-                ic.sendKeyEvent(new android.view.KeyEvent(
-                        android.view.KeyEvent.ACTION_UP,
-                        android.view.KeyEvent.KEYCODE_ENTER));
+        enter.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                InputConnection ic = getCurrentInputConnection();
+                if (ic != null) {
+                    ic.sendKeyEvent(new android.view.KeyEvent(
+                            android.view.KeyEvent.ACTION_DOWN,
+                            android.view.KeyEvent.KEYCODE_ENTER));
+                    ic.sendKeyEvent(new android.view.KeyEvent(
+                            android.view.KeyEvent.ACTION_UP,
+                            android.view.KeyEvent.KEYCODE_ENTER));
+                }
             }
         });
 
@@ -79,7 +91,12 @@ public class RazaqKeyboardService extends InputMethodService {
     private void setKey(View view, int id, final String text) {
         Button button = (Button) view.findViewById(id);
 
-        button.setOnClickListener(v -> sendText(text));
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendText(text);
+            }
+        });
     }
 
     private void sendText(String text) {
@@ -89,4 +106,4 @@ public class RazaqKeyboardService extends InputMethodService {
             ic.commitText(text, 1);
         }
     }
-            }
+}
