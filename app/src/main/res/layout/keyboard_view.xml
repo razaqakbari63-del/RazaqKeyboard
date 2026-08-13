@@ -4,86 +4,206 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="2dp">
+    android:padding="4dp"
+    android:background="#151515">
 
+    <!-- ردیف اول -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:layout_marginBottom="3dp">
 
-        <Button android:id="@+id/key_zad" android:text="ض" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_sad" android:text="ص" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_sen" android:text="ث" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_ghaf" android:text="ق" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_fa" android:text="ف" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_ghain" android:text="غ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_ain" android:text="ع" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <Button android:id="@+id/key_zad" android:text="ض"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
 
+        <Button android:id="@+id/key_sad" android:text="ص"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_sen" android:text="ث"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_ghaf" android:text="ق"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_fa" android:text="ف"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_ghain" android:text="غ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_ain" android:text="ع"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
     </LinearLayout>
 
+    <!-- ردیف دوم -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:layout_marginBottom="3dp">
 
-        <Button android:id="@+id/key_he" android:text="ه" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_khe" android:text="خ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_hah" android:text="ح" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_jim" android:text="ج" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_che" android:text="چ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_shin" android:text="ش" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_sin" android:text="س" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <Button android:id="@+id/key_he" android:text="ھ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
 
+        <Button android:id="@+id/key_khe" android:text="خ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_hah" android:text="ح"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_jim" android:text="ج"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_che" android:text="چ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_shin" android:text="ش"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_sin" android:text="س"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
     </LinearLayout>
 
+    <!-- ردیف سوم -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:layout_marginBottom="3dp">
 
-        <Button android:id="@+id/key_ye" android:text="ی" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_be" android:text="ب" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_lam" android:text="ل" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_alef" android:text="ا" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_te" android:text="ت" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_nun" android:text="ن" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_mim" android:text="م" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <Button android:id="@+id/key_ye" android:text="ے"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
 
+        <Button android:id="@+id/key_be" android:text="ب"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_lam" android:text="ل"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_alef" android:text="ا"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_te" android:text="ت"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_nun" android:text="טּ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_mim" android:text="م"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
     </LinearLayout>
 
+    <!-- ردیف چهارم -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:layout_marginBottom="3dp">
 
-        <Button android:id="@+id/key_kaf" android:text="ک" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_gaf" android:text="گ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_vav" android:text="و" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_re" android:text="ر" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_dal" android:text="د" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_zal" android:text="ذ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_ze" android:text="ز" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <Button android:id="@+id/key_kaf" android:text="ڪ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
 
+        <Button android:id="@+id/key_gaf" android:text="گ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_vav" android:text="و"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_re" android:text="ࢪ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_dal" android:text="د"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_zal" android:text="ذ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_ze" android:text="ز"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
     </LinearLayout>
 
+    <!-- ردیف پنجم -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp"
+        android:layout_marginBottom="3dp">
 
-        <Button android:id="@+id/key_zhe" android:text="ژ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_ta" android:text="ط" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_za" android:text="ظ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_pe" android:text="پ" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_hamze" android:text="ء" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
-        <Button android:id="@+id/key_back" android:text="⌫" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5"/>
+        <Button android:id="@+id/key_zhe" android:text="ژ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
 
+        <Button android:id="@+id/key_ta" android:text="ط"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_za" android:text="ظ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_pe" android:text="پ"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_hamze" android:text="ء"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:textSize="18sp" />
+
+        <Button android:id="@+id/key_back" android:text="⌫"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1.5" android:textSize="20sp" />
     </LinearLayout>
 
+    <!-- ردیف پایین -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="52dp">
 
-        <Button android:id="@+id/key_globe" android:text="🌐" android:layout_width="55dp" android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/key_globe"
+            android:text="🌐"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:textSize="20sp" />
 
-        <Button android:id="@+id/key_space" android:text="فاصله" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="3"/>
+        <Button
+            android:id="@+id/key_space"
+            android:text="فاصله"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textSize="15sp" />
 
-        <Button android:id="@+id/key_enter" android:text="↵" android:layout_width="55dp" android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/key_enter"
+            android:text="↵"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
