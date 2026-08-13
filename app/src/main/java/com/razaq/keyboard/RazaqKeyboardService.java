@@ -64,7 +64,9 @@ public class RazaqKeyboardService extends InputMethodService {
         back.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                getCurrentInputConnection().deleteSurroundingText(1, 0);
+                if (getCurrentInputConnection() != null) {
+                    getCurrentInputConnection().deleteSurroundingText(1, 0);
+                }
             }
         });
 
@@ -112,6 +114,7 @@ public class RazaqKeyboardService extends InputMethodService {
     }
 
     private void setText(int id, String text) {
+
         Button button = (Button) view.findViewById(id);
 
         if (button != null) {
@@ -120,6 +123,7 @@ public class RazaqKeyboardService extends InputMethodService {
     }
 
     private void sendText(String text) {
+
         if (getCurrentInputConnection() != null) {
             getCurrentInputConnection().commitText(text, 1);
         }
@@ -135,7 +139,7 @@ public class RazaqKeyboardService extends InputMethodService {
         setText(R.id.key_ghain, "غ");
         setText(R.id.key_ain, "ع");
 
-        setText(R.id.key_he, "ه");
+        setText(R.id.key_he, "ھ");
         setText(R.id.key_khe, "خ");
         setText(R.id.key_hah, "ح");
         setText(R.id.key_jim, "ج");
@@ -143,18 +147,18 @@ public class RazaqKeyboardService extends InputMethodService {
         setText(R.id.key_shin, "ش");
         setText(R.id.key_sin, "س");
 
-        setText(R.id.key_ye, "ی");
+        setText(R.id.key_ye, "ے");
         setText(R.id.key_be, "ب");
         setText(R.id.key_lam, "ل");
         setText(R.id.key_alef, "ا");
         setText(R.id.key_te, "ت");
-        setText(R.id.key_nun, "ن");
+        setText(R.id.key_nun, "טּ");
         setText(R.id.key_mim, "م");
 
-        setText(R.id.key_kaf, "ک");
+        setText(R.id.key_kaf, "ڪ");
         setText(R.id.key_gaf, "گ");
         setText(R.id.key_vav, "و");
-        setText(R.id.key_re, "ر");
+        setText(R.id.key_re, "ࢪ");
         setText(R.id.key_dal, "د");
         setText(R.id.key_zal, "ذ");
         setText(R.id.key_ze, "ز");
@@ -206,4 +210,4 @@ public class RazaqKeyboardService extends InputMethodService {
         setText(R.id.key_pe, "Ɋ");
         setText(R.id.key_hamze, "!");
     }
-                  }
+}
